@@ -6,7 +6,7 @@
 
 let userPreference = 'Sugar-free'; // Possible values: 'Regular', 'Sugar-free', or undefined
 const preferredType = userPreference ? 
-    (userPreference === 'Sugar-free' ? 'Sugarless' : 'Regular') 
+    (userPreference === 'Sugar-free' ? 'Sugar-free' : 'Regular') 
     : 'Regular';
 console.log(`Preferred Type of Monster Energy drink: ${preferredType}`);
 
@@ -14,8 +14,13 @@ console.log(`Preferred Type of Monster Energy drink: ${preferredType}`);
 // You have a variable that tracks the number of Monster Energy cans left in the fridge. 
 // Use a ternary operator to print "Time to restock!" if the number is less than 5, or "We're stocked!" if the number is 5 or more.
 
-let cansLeft = 3; // Any number of cans
-console.log(``);
+const cansLeft = 10;  
+const stockMessage = !isNaN(cansLeft) ? 
+    (cansLeft < 5 ? 
+        `Time to restock! Cans in stock: ${cansLeft}` 
+        : `We're stocked! Cans in stock: ${cansLeft}`)
+    : 'Invalid input: Please enter a number';
+console.log(stockMessage);
 
 
 // #### Challenge 3: Workout Intensity
