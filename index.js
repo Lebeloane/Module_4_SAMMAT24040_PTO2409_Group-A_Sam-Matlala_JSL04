@@ -52,13 +52,18 @@ console.log(tempMessage);
 // otherwise, print "Better stick to water."
 
 // Define the current hour in 24-hour format
-let currentHour = 22; 
+const currentHour = 20; 
 
 // Write your code below this line to determine if it's a good idea to have a Monster Energy drink based on the current hour
 // If it's between 7am and midnight (24-hour format), print "Unleash the beast!"
 // Otherwise, print "Better stick to water."
 
-
+const drinkMessage = !isNaN(currentHour) && currentHour >= 0 && currentHour <= 24 ?
+    (currentHour >= 7 && currentHour < 24 ? 
+        'Unleash the beast!' 
+        : 'Better stick to water.')
+    : 'Invalid hour: Please enter a number between 0 and 24';
+console.log(drinkMessage);
 
 
 
